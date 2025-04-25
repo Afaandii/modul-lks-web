@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Timer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .timer-container {
+      text-align: center;
+    }
+
+    .timer-display {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="timer-container">
+    <div class="timer-display" id="timerDisplay">000:00</div>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stopTimer()">Stop Timer</button>
+    <button onclick="resetTimer()">Reset Timer</button>
+  </div>
+
+  <script>
+    let startTime;
+    let timerInterval;
+    let isRunning = false;
+
+    console.log(Date.now())
+    function startTimer() {
+      if (!isRunning) {
+        startTime = Date.now() - (parseInt(document.getElementById('timerDisplay').innerText.split(':')[0]) * 1000 + parseInt(document.getElementById('timerDisplay').innerText.split(':')[1]));
+        timerInterval = setInterval(updateTimer, 10);
+        isRunning = true;
+      }
+    }
+
+    function stopTimer() {
+      if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+      }
+    }
+
+    function resetTimer() {
+      stopTimer();
+      document.getElementById('timerDisplay').innerText = '000:00';
+    }
+
+    function updateTimer() {
+      const elapsedTime = Date.now() - startTime;
+      const seconds = Math.floor(elapsedTime / 1000);
+      const centiseconds = Math.floor((elapsedTime % 1000) / 10);
+
+      const displaySeconds = String(seconds).padStart(3, '0');
+      const displayCentiseconds = String(centiseconds).padStart(2, '0');
+
+      document.getElementById('timerDisplay').innerText = `${displaySeconds}:${displayCentiseconds}`;
+
+      if (seconds >= 999 && centiseconds >= 59) {
+        stopTimer();
+      }
+    }
+  </script>
+</body>
+
+</html>

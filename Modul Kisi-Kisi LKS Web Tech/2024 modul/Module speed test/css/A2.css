@@ -1,0 +1,189 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body{
+  background-image: url('/assets/img/Wakatobi.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.container-nav img{
+  width: 100px;
+  height: 80px;
+  margin-left: 3rem;
+}
+
+.container-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 20px;
+  margin-right: 3rem;
+}
+
+.list-nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.card-1{
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 20px;
+  z-index: 999;
+  background-color: #2c2c2c;
+}
+
+.card-1 img{
+  width: 375px;
+  height: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+
+.capture{
+  overflow: hidden;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-1 h1{
+  color: #efeeef;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.card-1 p{
+  margin-top: 13px;
+  width: 80%;
+  text-align: left;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efeeef;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.card-1 a{
+  display: block;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 17px;
+  color: slateblue;
+  margin-bottom: 15px;
+}
+
+.card-2{
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 20px;
+  z-index: 999;
+  background-color: #2c2c2c;
+}
+
+.card-2 img{
+  width: 375px;
+  height: 255px;
+  border-radius: 18px;
+}
+
+.card-2 h1{
+  color: #efeeef;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 23px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.card-2 p{
+  margin-top: 13px;
+  width: 92%;
+  text-align: left;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efeeef;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.card-2 a{
+  display: block;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  color: slateblue;
+  margin-bottom: 10px;
+}
+
+.card-3{
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 20px;
+  z-index: 999;
+  background-color: #2c2c2c;
+}
+
+.card-3 img{
+  width: 375px;
+  height: 275px;
+  border-radius: 18px;
+}
+
+.card-3 h1{
+  color: #efeeef;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.card-3 p{
+  margin-top: 13px;
+  width: 92%;
+  text-align: left;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efeeef;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.card-3 a{
+  display: block;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  color: slateblue;
+  margin-bottom: 10px;
+}

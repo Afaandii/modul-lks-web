@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-welcome{
+    position: relative;
+    background-color: green;
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around  ;
+    align-items: center;
+}
+
+.input-game{
+    /* position: absolute; */
+    background-color: green;
+}
+
+.img-thumbnail img{
+    width: 250px;
+    height: 200px;
+    background-color: green;
+}
+
+.img-thumbnail{
+    margin-bottom: 30px;
+    background-color: green;
+}
+
+.button-welcome img{
+    width: 20px;
+    height: 20px;
+}
+
+.input-welcome{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-welcome #username{
+    background-color: #125c12;
+    color: white;
+    padding: 10px;
+    border: 2px solid #026e02;
+    border-radius: 10px;
+}
+.input-welcome #username::placeholder{
+    color: white;
+}
+.input-welcome #level{
+    background-color: rgb(18, 92, 18);
+    color: white;
+    padding: 10px;
+    border: 2px solid #026e02;
+    border-radius: 10px;
+}
+.input-welcome option{
+    background-color: #125c12;
+}
+
+.button-welcome{
+    background-color: green;
+    margin-top: 20px;
+}
+
+#play img{
+    width:20px;
+    height: 20px;
+    background-color: #249124;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+
+#play{
+    background-color: #249124;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#intruction{
+    background-color: yellow;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    margin-left: 10px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.rules{
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    height: 50%;
+    width: 40%;
+}
+
+.rules p{
+    background-color: rgba(0,0,0, 0);
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.rules h1{
+    background-color:  rgba(0,0,0, 0);
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.icon-close{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color:  rgba(0,0,0, 0);
+
+}
+
+.countdown{
+    display: none;
+    position: absolute;
+    background-color: green;
+    width: 600px;
+    height: 300px;
+    z-index: 999;
+    transform: translate(100%, 100%);
+}
+
+
+.countdown  h3{
+    background-color: green;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform: translate(-5%);
+}
+
+.board-image{
+    width: 1000px;
+    height: 600px;
+    background-position: center;
+    object-fit: contain;
+}
+
+.papan-items{
+    position:absolute;
+    transform: translate(135%,-410%);
+    display: flex;
+    gap: .5rem;
+}
+
+/* .sun{
+    position: absolute;
+    transform: translate(125%, 30%);
+} */

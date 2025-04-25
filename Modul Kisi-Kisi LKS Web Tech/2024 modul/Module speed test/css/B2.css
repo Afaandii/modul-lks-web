@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+
+.rating-container {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+  margin-left: 30rem;
+  margin-top: 15rem;
+}
+
+/* Bintang kosong */
+.stars {
+  width: 100%;
+  display: block;
+}
+
+/* Layer background untuk mengisi bintang */
+.stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: gold;
+  -webkit-mask-image: url('/assets/img/stars.png');
+  mask-image: url('/assets/img/stars.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  transition: width 0.3s ease-in-out;
+}

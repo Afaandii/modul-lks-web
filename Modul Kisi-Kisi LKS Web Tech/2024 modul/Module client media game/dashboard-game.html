@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Games</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard">
+  <nav>
+    <div class="detail-game">
+      <ul>
+        <li>
+          <h3 id="player-name">Player Name</h3>
+        </li>
+        <li>Score: <span id="score"></span></li>
+        <li>Time: <span id="time"></span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="leaderboard">
+      <div class="leaderboard-item">
+        <h1>LEADERBOARD</h1>
+        <select id="sort-score">
+          <option value="sort-score">Sort By Score</option>
+        </select>
+        <div class="card-user">
+          <h3>Thomas Galih</h3>
+          <h4>Score: <span id="total-score">55</span></h4>
+          <div class="btn-detail">
+            <button>Detail</button>
+          </div>
+          <hr size="2" width="180">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

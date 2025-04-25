@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Bar Chart</title>
+</head>
+
+<body>
+
+  <canvas id="barChart"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js"></script>
+
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch("php files/random.php"); // Ambil data dari random.php
+        const data = await response.json(); // Ubah ke JSON
+        console.log(data)
+
+        // Pilih jumlah batang secara acak antara 5 hingga 15
+        const numBars = Math.floor(Math.random() * (15 - 5 + 1)) + 5;
+        const selectedData = data.slice(0, numBars); // Ambil data sebanyak numBars
+
+        // Pisahkan nama dan nilai untuk chart
+        const labels = selectedData.map(item => item.name);
+        const values = selectedData.map(item => item.value);
+
+        // Buat warna acak untuk setiap batang
+        const colors = selectedData.map(() => `hsl(${Math.random() * 360}, 70%, 50%)`);
+
+        // Buat grafik batang
+        const ctx = document.getElementById("barChart").getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: labels, // Sumbu X pakai "name"
+            datasets: [{
+              label: "Random Data",
+              data: values, // Sumbu Y pakai "value"
+              backgroundColor: colors
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                ticks: {
+                  beginAtZero: true,
+                  stepSize: Math.ceil(Math.max(...values) / 5), // Pastikan ada minimal 5 label Y
+                  callback: function (value) {
+                    return Number(value).toFixed(0);
+                  } // Hilangkan desimal
+                }
+              }
+            }
+          }
+        });
+
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  </script>
+
+</body>
+
+</html>

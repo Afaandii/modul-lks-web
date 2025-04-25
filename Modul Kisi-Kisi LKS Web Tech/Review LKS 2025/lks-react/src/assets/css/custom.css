@@ -1,0 +1,97 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+    padding-top: 3.5rem;
+}
+.btn, .jumbotron {
+    border-radius: 0;
+}
+.jumbotron {
+    background: #FAFAFA;
+}
+.spot {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    background: #FAFAFA;
+}
+.unavailable {
+    opacity: 0.5;
+    cursor: default;
+}
+.slot {
+    background: #FAFAFA;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+.slot.filled {
+    border: 2px solid #44b844;
+}
+
+
+.form-login{
+    margin-left: 20rem;
+    width: 80vw;
+}
+
+
+.form-control{
+    width: 25vw;
+}
+
+.btn-login{
+    width: 25vw;
+    background-color: blueviolet;
+
+}
+
+.container-form{
+    background-color: blueviolet;
+    color: white;
+}
+
+.container-login{
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+}
+
+.container-header{
+    width: 99vw;
+    overflow: hidden
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.validation-header{
+    width: 99vw;
+    margin-bottom: 5rem;
+}
+
+.validation-footer{
+    margin-top: 5rem;
+}
+
+.reason-accep{
+    width: 55vw;
+}
+
+.vacancies-container{
+    width: 99vw;
+}
+
+.show-container{
+    width: 99vw;    
+}
+
+.container-area-show{
+    width: 58vw;
+}
+.button-apply-job{
+    vertical-align: middle;
+    margin-top: 4rem;
+}

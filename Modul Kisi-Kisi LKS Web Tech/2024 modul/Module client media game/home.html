@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Speed Test Js</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="gameWelcome">
+    <div class="text-welcome">
+      <h2>Welcome To Shooter Game</h2>
+      <p>Get ready to play!</p>
+    </div>
+    <button class="close-btn" onclick="closeWelcome()">Start</button>
+  </div>
+
+  <section class="section-thumbnail">
+    <div class="logo-game">
+      <img src="assets/Example/Sprites/shooter.png" alt="logo">
+    </div>
+
+    <!-- Countdown Overlay -->
+    <div id="countdown-overlay" class="countdown-overlay">
+      <span id="countdown-text">3</span>
+    </div>
+
+    <div class="input-games">
+      <input type="text" placeholder="Input Your Name" class="input-username" id="username">
+      <select id="" class="input-level">
+        <option value="">Select Level</option>
+        <option value="Easy" id="easy">Easy</option>
+        <option value="Medium" id="medium">Medium</option>
+        <option value="Hard" id="hard">Hard</option>
+      </select>
+    </div>
+
+    <div class="game-board">
+      <div class="guns">
+        <img class="img-board" src="assets/Example/Sprites/gun1.png" alt="board-guns">
+        <img class="img-board" src="assets/Example/Sprites/gun2.png" alt="board-guns">
+        <div class="radio-guns">
+          <input type="radio" name="" id="" class="guns-1">
+          <input type="radio" name="" id="" class="guns-2">
+        </div>
+      </div>
+      <div class="target">
+        <img class="img-board" src="assets/Example/Sprites/target1.png" alt="board-guns">
+        <img class="img-board" src="assets/Example/Sprites/target2.png" alt="board-guns">
+        <img class="img-board" src="assets/Example/Sprites/target3.png" alt="board-guns">
+        <div class="radio-target">
+          <input type="radio" id="target-1" class="target-1">
+          <input type="radio" id="target-2" class="target-2">
+          <input type="radio" id="target-3" class="target-3">
+        </div>
+      </div>
+    </div>
+
+    <div class="button-game">
+      <button class="play-btn" id="play-game">Play Game</button>
+      <button class="intro-btn" id="intro">Introduction</button>
+    </div>
+  </section>
+
+  <div id="game-rules">
+    <h1>How to play game</h1>
+    <ul>
+      <li>1. Input Username</li>
+      <li>2. Point the pointer at the target</li>
+      <li>3. Click to shoot</li>
+      <li>4. Get as many points as possible</li>
+      <li>5. Enjoy !</li>
+    </ul>
+    <button id="close-rules"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

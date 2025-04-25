@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Layout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="countdown" id="countdown-con">
+   <h3 id="countdown">3</h3>
+    </div>
+    <div class="container">
+        <div class="container-welcome">
+            <div class="input-game">
+                <div class="img-thumbnail">
+                    <img src="img/logo.png" alt="img-thumnail">
+                </div>
+                <div class="input-welcome">
+                    <input type="text" placeholder="Input Username" id="username">
+                    <select id="level">
+                        <option value="Select Level">Select Level</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="button-welcome">
+                    <button id="play"><img src="img/Shovel.png">PLay Game</button>
+                    <button id="intruction">Instruction</button>
+                </div>
+            </div>
+            <div class="rules" id="rules">
+                <img src="img/close-icon.png" id="close" class="icon-close">
+                <h1>How To Play Game</h1>
+                <p>
+                    1. Input Userame
+                </p>
+                <p>
+                   2. Take The Sun Choose the plant card
+                </p>
+                <p>
+                   3. Put a plant cards into the field to fight zombies
+                </p>
+                <p>
+                   4. Dont't let zombies pass through the yard
+                </p>
+                <p>
+                   5. Enjoy!
+                </p>
+            </div>
+        </div>
+    </div>
+
+        <!-- <canvas id="game-board"></canvas> -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
